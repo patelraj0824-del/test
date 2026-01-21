@@ -1,0 +1,81 @@
+MONGODB_URI=mongodb+srv://halosolulab_db_user:lPxH7IDdeGkFWbCo@halo.tnr9fn.mongodb.net/?appName=Halo
+MONGODB_DATABASE=halo_ai
+
+# ===============================
+# Google Cloud Configuration
+# ===============================
+
+
+GOOGLE_PROJECT_ID=halo-ai-01
+GOOGLE_LOCATION=us-central1
+GOOGLE_APPLICATION_CREDENTIALS=C:\Users\hp\PycharmProjects\haloai-agents-ai\halo-ai-01-64cd4a659704.json
+GOOGLE_API_KEY=AIzaSyBW-2lX2rBzJ0vUUj8YGXix7hqXneliDWo
+
+# ===============================
+# BigQuery Configuration
+# ===============================
+BIGQUERY_PROJECT_ID=halo-ai-01
+BIGQUERY_DATASET=tekion_data
+
+# ===============================
+# Pub/Sub Configuration (for ingestion scheduling)
+# ===============================
+USE_PUBSUB_INGESTION=False
+PUBSUB_TOPIC_ID=ingestion-trigger
+PUBSUB_SUBSCRIPTION_ID=ingestion-trigger-sub
+
+# ===============================
+# FTP/SFTP Configuration
+# ===============================
+# Path to FTP connections config file
+FTP_CONNECTIONS_CONFIG=C:\Users\hp\PycharmProjects\haloai-agents-ai\ftp_connections 2.json
+VIN_SOLUTION_API_CONNECTION=C:\Users\hp\PycharmProjects\haloai-agents-ai\api_connections.json
+
+# Path to SSH private key (if using SFTP with key auth)
+FTP_SSH_KEY_PATH=dev-halo-ai-ftp.pem
+
+# ===============================
+# Qdrant Vector Database Configuration
+# ===============================
+# Use in-memory mode (False = persistent storage)
+QDRANT_USE_MEMORY=False
+QDRANT_HOST=https://7df54cac-2f2b-4802-8932-ffece842e952.us-east4-0.gcp.cloud.qdrant.io
+QDRANT_PORT=6333
+QDRANT_COLLECTION_NAME=halo_ai_vectors
+QDRANT_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.u7fbSiI0xGwN5yrpS8_BocnLLypqHCz5zM83rlBnUF4
+
+
+# ===============================
+# Embedding Configuration
+# ===============================
+EMBEDDING_MODEL=text-embedding-004
+EMBEDDING_DIMENSION=768
+
+# ===============================
+# Server Configuration
+# ===============================
+HOST=0.0.0.0
+PORT=8000
+DEBUG=True
+# For production, set DEBUG=False
+
+# ===============================
+# CORS Configuration (Optional)
+# ===============================
+CORS_ORIGINS=*
+ENV=dev
+GOOGLE_CLOUD_STORAGE=halo-ai-01
+# For production, specify allowed origins:
+# CORS_ORIGINS=https://yourdomain.com,https://app.yourdomain.com
+
+
+# ===============================
+# Logging Configuration
+# ===============================
+LOG_LEVEL=INFO
+ENABLE_ADK=True
+BACKEND_API_URL=http://34.27.71.27:3003/api/v1/subscriptions/user-subscription-ai
+# Options: DEBUG, INFO, WARNING, ERROR, CRITICAL0
+
+
+LLM_INPUT_TOKEN_LIMIT=50000

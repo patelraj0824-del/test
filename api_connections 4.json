@@ -1,0 +1,75 @@
+{
+  "project": {
+    "bigquery_project": "halo-ai-01",
+    "bigquery_credentials": "halo-ai-01-64cd4a659704.json"
+  },
+  "api_connections": [
+    {
+      "api_id": "vinsolutions_lead_management",
+      "api_type": "vinsolutions_crm",
+      "name": "VinSolutions Lead Management API",
+      "description": "Lead generation, contacts, dealers, and vehicle information",
+      "base_url": "https://sandbox.api.vinsolutions.com",
+      "auth_type": "oauth2",
+      "auth_url": "https://authentication.vinsolutions.com/connect/token",
+      "client_id": "GATEW-3edcb6c208ae4efd98fe8460a6473f85",
+      "client_secret": "8BD7B3C7D0EC488C8329C4B1D56674A0",
+      "scope": "PublicAPI",
+      "api_key": "1PnwJj5Hgs86juXkPMeOqak4R48eDZufsfwulUj2",
+      "headers": {
+        "Accept": "application/vnd.coxauto.v1+json",
+        "Content-Type": "application/vnd.coxauto.v1+json",
+        "api_key": "1PnwJj5Hgs86juXkPMeOqak4R48eDZufsfwulUj2"
+      },
+      "endpoints": {
+        "leads": "/leads",
+        "contacts": "/gateway/v1/contact",
+        "dealers": "/gateway/v1/organization/dealers",
+        "users": "/gateway/v1/tenant/user",
+        "vehicles_interest": "/vehicles/interest",
+        "vehicles_trade": "/vehicles/trade",
+        "lead_types": "/leadTypes",
+        "lead_statuses": "/leadStatuses",
+        "lead_status_types": "/leadStatusTypes",
+        "lead_group_categories": "/leadGroupCategories",
+        "lead_sources": "/leadSources"
+      },
+      "rate_limit": {
+        "requests_per_second": 10,
+        "requests_per_minute": 500
+      },
+      "read_only": true,
+      "enabled": true,
+      "environment": "sandbox"
+    },
+    {
+      "api_id": "vinsolutions_call_tracking",
+      "api_type": "vinsolutions_calls",
+      "name": "VinSolutions Call Tracking API",
+      "description": "Dealership call details for call tracking and telephony",
+      "base_url": "https://sandbox.api.vinsolutions.com",
+      "auth_type": "oauth2",
+      "auth_url": "https://authentication.vinsolutions.com/connect/token",
+      "client_id": "GATEW-3edcb6c208ae4efd98fe8460a6473f85",
+      "client_secret": "8BD7B3C7D0EC488C8329C4B1D56674A0",
+      "scope": "PublicAPI",
+      "api_key": "ongSQJfEJrCzFvLM2BQk5vDd1GdTWwv8wMTLNBX1",
+      "headers": {
+        "Accept": "application/vnd.coxauto.v3+json",
+        "Content-Type": "application/vnd.coxauto.v3+json",
+        "api_key": "ongSQJfEJrCzFvLM2BQk5vDd1GdTWwv8wMTLNBX1"
+      },
+      "endpoints": {
+        "call_details": "/calldetails/id/{call_id}",
+        "calls_list": "/calldetails"
+      },
+      "rate_limit": {
+        "requests_per_second": 10,
+        "requests_per_minute": 500
+      },
+      "read_only": true,
+      "enabled": true,
+      "environment": "sandbox"
+    }
+  ]
+}
